@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Composite_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AQF-Y8-rhq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="j5V-EE-GC3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="04h-Dy-Cfi"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkc-LS-QG5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Level #0" id="kLz-5r-cvp">
+                                        <barButtonItem key="leftBarButtonItem" style="done" id="PQf-XI-xAz">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="hBH-nE-kLu">
+                                                <rect key="frame" x="20" y="7" width="39" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Test"/>
+                                                <connections>
+                                                    <action selector="goFirstTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMd-0M-YKM"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" id="ILG-TR-RU7">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Clx-6B-3V5">
+                                                <rect key="frame" x="364" y="7" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="addTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ta8-UZ-byl"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jkc-LS-QG5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Cm-Ql-r5o"/>
+                            <constraint firstItem="AQF-Y8-rhq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3cs-cH-cPz"/>
+                            <constraint firstItem="Jkc-LS-QG5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="He3-fR-Xnr"/>
+                            <constraint firstItem="AQF-Y8-rhq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RBt-2k-66a"/>
+                            <constraint firstItem="AQF-Y8-rhq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="om5-MW-OVN"/>
+                            <constraint firstItem="Jkc-LS-QG5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pXn-IG-hpd"/>
+                            <constraint firstItem="AQF-Y8-rhq" firstAttribute="top" secondItem="Jkc-LS-QG5" secondAttribute="bottom" id="sLi-xU-eDi"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="levelTitle" destination="kLz-5r-cvp" id="Pse-ZS-S9c"/>
+                        <outlet property="tableView" destination="AQF-Y8-rhq" id="hea-wM-hpn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,13 +1,13 @@
 //
 //  AppDelegate.swift
-//  Composite_pattern
+//  Composite
 //
-//  Created by test on 06.09.2022.
+//  Created by Anton Chechevichkin on 06.09.2022.
 //
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
